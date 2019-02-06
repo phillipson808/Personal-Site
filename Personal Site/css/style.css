@@ -1,0 +1,852 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    background-color: rgb(30,30,30);
+}
+
+/*Navigation Styles Start */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+    background-color: rgba(30,30,30,0.5);
+
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin-left: 500px;
+    list-style-type: none;
+}
+
+.nav-links a:hover{
+    color: lightgrey;
+}
+
+#logo{
+    height: 50px;
+}
+
+#navigation ul{
+    right: 3%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+    
+}
+
+
+#navigation li {
+    display: inline;
+    padding-right: 20px;
+ 
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Josefin Sans', 'sans-serif';
+    font-weight: 400;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+.nav-links a:hover{
+    color: lightGrey;
+}
+
+.burger{
+    padding-top: 20px;
+    padding-left: 20px;
+    display: none;
+ 
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+
+/*Navigation Styles End*/
+
+/*Showcase Styles Start*/
+#showcase{
+    height: 400px;
+    background-image: url('../img/forkwave.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -5;
+
+}
+
+
+
+/*Showcase Styles End*/
+
+#description{
+    text-align: center;
+    font-family: 'Josefin Sans','sans-serif';   
+    font-size: 14px;
+    padding: 10%;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/hibiscus.jpg');
+}
+
+.descriptionContent{
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1910px){
+    #description{
+        font-size: 30px;
+
+    }
+
+    .descriptionContent{
+        width: 600px;
+    }
+}
+.imageContainer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 500px 500px;
+    grid-auto-rows: auto;
+    position: relative;
+    z-index: 0;
+
+}
+
+.leftImage{
+    background-image: url('../img/jessViloa.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: hand;
+}
+
+.rightImage{
+    background-image: url('../img/lebron.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: hand;
+}
+
+
+
+.overlay{
+    position: absolute;
+    transition: all .3s ease;
+    opacity: 0;
+    height: 500px;
+    width: 50%;
+    background-color: rgba(30,30,30,0.5);;
+}
+
+.overlay:hover{
+    opacity: 0.5;
+
+
+}
+
+.text{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Josefin Sans','sans-serif';
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    
+}
+
+.leftImage2{
+    background-image: url('../img/timberland.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: hand;
+}
+
+.rightImage2{
+    background-image: url('../img/portlandCoffeeCup.png');
+    background-size: cover;
+    background-position: center;
+    cursor: hand;
+
+}
+
+footer {
+    padding: 25px;
+    background-color: #1E1E1E;
+   
+}
+
+
+footer p {
+    color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', 'sans-serif';
+    font-size: 12px;
+
+}
+
+
+@media screen and (max-width: 850px){
+
+    body{
+        overflow-x: hidden;
+        background-color: rgba(30,30,30) !important;
+        
+    }
+    .imageContainer{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 500px 500px 500px 500px;
+        grid-auto-rows: auto;
+        position: relative;
+    
+    }
+
+    .overlay{
+        width: 100%;
+    }
+
+   
+   
+
+
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 10vh;
+        background-color: rgba(30,30,30,0.5);;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        position: fixed;
+     
+        
+    }
+
+    .burger{
+        display: block;
+        margin-left: 60%;
+        cursor: hand;
+        padding-bottom: 3%;
+
+    }
+
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+    nav{
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+
+
+    }
+}
+
+
+/*VILOA PAGE*/
+
+
+#showcaseViloa{
+    background-image: url('../img/JacksonViloa2.jpg');
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -5;
+
+
+}
+
+
+.viloaDescription{
+    text-align: center;
+    padding: 2.5% 25%;
+    font-family: 'Cardo','serif';
+    color: white;
+    font-size: 12px;
+
+
+
+    
+}
+
+.viloaDescription h1{
+    font-family: 'Josefin sans','sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: rgb(255, 255, 255);
+
+}
+
+.viloaDescription p {
+    font-family: 'Josefin-sans','sans-serif';
+}
+
+.viloaDescription a{
+    color: white;
+}
+
+.viloaDescriptionBox{
+    height: 150px;
+    width: 100%;
+    background-color: rgba(30,30,30);
+    vertical-align: middle;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 600px;
+    
+}
+
+
+
+.box1{
+    grid-column: 1/3;
+    background-image: url('../img/andrew.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.box2{
+    background-image: url('../img/caraViloa.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.box3{
+    background-image: url("../img/luke.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.box4{
+    grid-column: 2/4;
+    background-image: url('../img/jessViloa.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.box5{
+    grid-column: 1/3;
+    background-image: url('../img/viloaHat.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.box6{
+    background-image: url('../img/coleBeach2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.box7{
+    background-image: url('../img/malae.jpg');
+    background-position: center;
+    background-size: cover;    
+}
+
+.box8{
+    grid-column: 2/4;
+    background-image: url('../img/lukeMonstera.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 850px){
+    
+
+    .descriptionContent{
+        width: 80%;
+    }
+    .viloaDescription{
+        padding: 40px;
+    }
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+ 
+    .box1{
+        grid-column: 1/3;
+    }
+
+    .box2{
+        grid-column: 1/2;
+        background-position: center;
+    }
+    .box3{
+        grid-column: 2/3;
+
+    }
+    .box4{
+        grid-column: 1/3;
+        
+    }
+
+    .box5{
+        background-image: url('../img/malae.jpg');
+        background-position: center;
+        background-size: cover;   
+        grid-column: 1/2;
+    }
+
+    .box6{
+    background-image: url('../img/lukeMonstera.jpg');
+    background-size: cover;
+    background-position: center;
+        
+    }
+
+    .box7{
+        background-image: url('../img/viloaHat.png');
+        grid-column: 1/3;
+    }
+
+    .box8{
+        display: none;
+    }
+ 
+}
+
+
+
+
+/* Puffs Stlyes */
+
+/*Puffs Showcase Start*/
+#puffsShowcase{
+    background-image: url('../img/lebron.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+}
+
+.puffsShowcase{
+    position: relative;
+}
+
+.showcaseDescription{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-family: 'Josefin sans', 'sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 1em;
+
+}
+
+.showcaseDescription h1{
+    font-size: 80px;
+}
+
+.showcaseDescription p{
+    text-align: center;
+}
+
+.contentDescriptionBox{
+    width: 100%;
+    text-align: center;
+    background-color: #2D2D2D;
+}
+
+.contentDescription{
+    color: white;
+    background-color: rgba(30,30,30);
+    text-align: center;
+    display: inline-block;
+    padding: 20px;
+
+}
+
+.contentDescription h1{
+    font-family: 'Josefin sans','sans-serif';
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    width: 100%;
+}
+
+.contentDescription p{
+    font-family: 'Cardo', 'serif';
+    font-size: 12px;
+   
+}
+
+@media screen and (max-width: 850px){
+   .contentDescription h1{
+        font-size: 20px;
+        letter-spacing: 0;
+        margin: 0 auto;
+
+   }
+
+
+
+   
+  
+
+}
+
+@media screen and (max-width: 568px){
+    .showcaseDescription h1{
+        font-size: 65px;
+    }
+
+    
+   
+}
+
+@media screen and (min-width: 1910px){
+    .showcaseDescription h1{
+        font-size: 100px;
+       
+    }
+    .showcaseDescription{
+        padding-bottom: 10%;
+    }
+}
+
+
+
+/*Puffs Showcase End*/
+
+.contentDescriptionTwo{
+    text-align: center;
+    display: inline-block;
+    font-family: 'Josefin sans','sans-serif';
+    margin: 20px;
+    font-size: 6px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+
+}
+
+.contentDescriptionTwo h1{
+    color: white;
+
+}
+
+.puffsAds{
+    width: 100%;
+    text-align: center;
+    background-color: #424242;
+    color: white;
+}
+
+.puffsAdsInner{
+    font-family: 'Josefin sans','sans-serif';
+    height: 50px;
+    display: inline-block;
+    padding: 18px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 8px;
+}
+
+
+
+
+.puffsGrid div{
+    border: 1px solid black;
+}
+
+.ad{
+    max-width: 100%;
+    height: auto;
+
+}
+
+.adContainer{
+    max-width: 80%;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 850px){
+    .showcaseDescription{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    
+    }
+  
+
+}
+
+/*Timberland Styles Start*/
+
+#timberlandShowcase{
+    height: 800px;
+    background-image: url(../img/timberlandDark.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -5;
+    overflow: hidden;
+}
+
+#timberlandShowcaseContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'Josefin sans','sans-serif';
+    text-transform: uppercase;
+    text-align: center;
+    overflow: hidden;
+}
+#timberlandShowcaseContent h1{
+    font-size: 80px;
+    overflow: hidden;
+
+}
+
+#timberlandShowcaseContent p{
+    font-size: 16px;
+    letter-spacing: 20px;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 850px){
+    #timberlandShowcaseContent h1{
+        font-size: 45px;
+    }
+
+    #timberlandShowcaseContent p{
+        font-size: 12px;
+    }
+   
+
+}
+
+/*PRC Styles Start*/
+
+#portlandRoastingShowcase{
+    background-image: url('../img/portlandCoffeeCup.png');
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+    position: relative;
+    z-index: -5;
+}
+
+#portlandRoastingShowcaseContent{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-family: 'Josefin sans','sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+#portlandRoastingShowcaseContent p{
+    margin-left: 2px;
+    font-size: 15px;
+}
+
+#portlandh1{
+    letter-spacing: 4px;
+}
+
+
+.appContent{
+    width: 60%;
+    margin: 0 auto;
+}
+.appContent p{
+    font-family: 'Cardo', 'sans-serif';
+    font-size: 12px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+/*About Page*/
+
+#aboutBox{
+    padding: 12% 10%;
+}
+
+.aboutGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 600px;
+    grid-gap: 5%;
+}
+
+
+.spencerGif{
+    background-image: url('../img/Spencer-Gif-Face.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutContent{
+    color: white;
+
+}
+
+.aboutContent h1{
+    font-family: 'Josefin sans', 'sans-serif';
+    letter-spacing: 0.5em;
+}
+
+.aboutContent p{
+    padding-top: 10px;
+    font-family: 'Josefin sans' ,'sans-serif';
+    line-height: 30px;
+}
+
+@media screen and (max-width: 850px){
+    .aboutGrid{
+        grid-template-columns: 1fr;
+        grid-gap: 2em;
+    }
+
+
+    
+}
+
+/*Design Start*/
+
+
+.designshowcaseContent{
+    color: white;
+    padding-top: 15%;
+    text-align: center;
+    font-family: 'Josefin sans','sans-serif';
+}
+
+
+
+
+
+
+
+  
+
+.designGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 300px;
+    padding: 10%;
+}
+
+
+
+
+.designBox1{
+    background-image: url('../img/foodBike.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.designBox2{
+    background-image: url('../img/ghosty-01.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.designBox3{
+    background-image: url('../img/90s.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+.designBox4{
+    background-image: url('../img/lightit.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.designBox5{
+    background-image: url('../img/viloalighthouse.png');   
+    background-size: cover;
+    background-position: center;
+}
+
+.designBox6{
+    background-image: url('../img/marich.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.designBox7{
+    background-image: url('../img/alohaHula.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.designBox8{
+    background-image: url("../img/howzit.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.designBox9{
+    background-image: url('../img/kaboom.png');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 850px){
+    .designGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+
+@media screen and (max-width: 550px){
+    .designGrid{
+        grid-template-columns: 1fr;
+    }
+    .designshowcaseContent{
+        padding: 20% 15% 0% 15%;
+    }
+   
+}
